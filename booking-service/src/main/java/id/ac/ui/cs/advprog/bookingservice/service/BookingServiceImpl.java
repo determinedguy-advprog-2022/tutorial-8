@@ -28,7 +28,6 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public Booking createBooking(CreateBookingDTO bookingRequest) {
-        // ToDo
         BookingApproval bookingResponse =
                 restTemplate.postForObject("http://ASDOS-SERVICE/asdos/book", bookingRequest, BookingApproval.class);
 
